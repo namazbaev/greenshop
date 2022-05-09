@@ -4,7 +4,8 @@ import {
     CenterList, CenterItem, CallIcon, MsgIcon, LocationIcon,
     BottomList, BottomItem, BottomLink, SocialMedia, SocialItem,
     SocialLink, FacebookIcon, LinkedinIcon, InstagramIcon, TwitterIcon,
-    UnionIcon, CopyRight, VisaIcon, PaypalIcon, MasterCardIcon, AmericanExpIcon
+    UnionIcon, CopyRight, VisaIcon, PaypalIcon, MasterCardIcon, AmericanExpIcon,
+    Payments, PaymentItem
 } from './style';
 import LogoImg from 'assets/icons/logo.svg';
 import Flower1 from 'assets/icons/flower-1.svg';
@@ -168,27 +169,27 @@ export default () => (
                     <Title>Social Media</Title>
                     <SocialMedia>
                         <SocialItem social>
-                            <SocialLink>
+                            <SocialLink href="https://www.facebook.com" target="_blank">
                                 <FacebookIcon />
                             </SocialLink>
                         </SocialItem>
                         <SocialItem social>
-                            <SocialLink>
+                            <SocialLink href="https://instagram.com" target="_blank">
                                 <InstagramIcon />
                             </SocialLink>
                         </SocialItem>
                         <SocialItem social>
-                            <SocialLink>
+                            <SocialLink href="https://twitter.com" target="_blank">
                                 <TwitterIcon />
                             </SocialLink>
                         </SocialItem>
                         <SocialItem social>
-                            <SocialLink>
+                            <SocialLink href="https://www.linkedin.com" target="_blank">
                                 <LinkedinIcon />
                             </SocialLink>
                         </SocialItem>
                         <SocialItem social>
-                            <SocialLink>
+                            <SocialLink href="http://www.unionsocial.ca" target="_blank">
                                 <UnionIcon />
                             </SocialLink>
                         </SocialItem>
@@ -196,28 +197,28 @@ export default () => (
                     <Title>
                         We accept
                     </Title>
-                    <SocialMedia>
-                        <SocialItem>
-                            <SocialLink>
+                    <Payments>
+                        <PaymentItem>
+                            <SocialLink href="https://www.paypal.com" target="_blank">
                                 <PaypalIcon />
                             </SocialLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialLink>
+                        </PaymentItem>
+                        <PaymentItem>
+                            <SocialLink href="https://www.mastercard.com" target="_blank">
                                 <MasterCardIcon />
                             </SocialLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialLink>
+                        </PaymentItem>
+                        <PaymentItem>
+                            <SocialLink href="https://usa.visa.com" target="_blank">
                                 <VisaIcon />
                             </SocialLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialLink>
+                        </PaymentItem>
+                        <PaymentItem>
+                            <SocialLink href="https://www.americanexpress.com" target="_blank">
                                 <AmericanExpIcon />
                             </SocialLink>
-                        </SocialItem>
-                    </SocialMedia>
+                        </PaymentItem>
+                    </Payments>
                 </BottomList>
             </Bottom>
         </Container>

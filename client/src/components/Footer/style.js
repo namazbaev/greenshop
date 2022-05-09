@@ -18,7 +18,8 @@ const iconCommon = css`
     margin-right: 10px;
 `
 const socialCommon = css`
-    height: 35px;
+    width: 40px;
+    height: 30px;
 `
 export const VisaIcon = styled(VISA)`${socialCommon}`
 export const PaypalIcon = styled(Paypal)`${socialCommon}`
@@ -164,15 +165,28 @@ export const SocialItem = styled.li`
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    border: ${({ social }) => !social || "var(--green-border)"};
+    border: var(--green-border);
     list-style-type: none;
     &:not(:last-child) {
         margin-right: 10px;
     }
 `
-export const SocialLink = styled.a`
-
+export const Payments = styled.ul`
+    display: flex;
+    align-items: center;
+    /* margin: 30px 0; */
 `
+export const PaymentItem = styled.li`
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+`
+export const SocialLink = styled.a``
 export const CopyRight = styled.p`
     font-size: 14px;
     font-weight: 400;
