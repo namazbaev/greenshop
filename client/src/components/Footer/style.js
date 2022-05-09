@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ReactComponent as Call } from 'assets/icons/call.svg';
+import { ReactComponent as VISA } from 'assets/icons/visa.svg';
+import { ReactComponent as Paypal } from 'assets/icons/paypal.svg';
 import { ReactComponent as Union } from 'assets/icons/union.svg';
 import { ReactComponent as Linkedin } from 'assets/icons/linkedin.svg';
 import { ReactComponent as Twitter } from 'assets/icons/twitter.svg';
@@ -7,12 +9,21 @@ import { ReactComponent as Instagram } from 'assets/icons/instagram.svg';
 import { ReactComponent as Facebook } from 'assets/icons/facebook.svg';
 import { ReactComponent as Message } from 'assets/icons/message.svg';
 import { ReactComponent as Location } from 'assets/icons/location.svg';
+import { ReactComponent as MasterCard } from 'assets/icons/master-card.svg';
+import { ReactComponent as AmericanExp } from 'assets/icons/american-express.svg';
 
 const iconCommon = css`
     width: 20px;
     height: 20px;
     margin-right: 10px;
 `
+const socialCommon = css`
+    height: 35px;
+`
+export const VisaIcon = styled(VISA)`${socialCommon}`
+export const PaypalIcon = styled(Paypal)`${socialCommon}`
+export const MasterCardIcon = styled(MasterCard)`${socialCommon}`
+export const AmericanExpIcon = styled(AmericanExp)`${socialCommon}`
 export const CallIcon = styled(Call)`${iconCommon}`
 export const MsgIcon = styled(Message)`${iconCommon}`
 export const LocationIcon = styled(Location)`
@@ -31,6 +42,8 @@ export const Container = styled.footer`
 export const Top = styled.section``
 export const Center = styled.section`
     background-color: #ECF6EE;
+    border-top: var(--green-border);
+    border-bottom: var(--green-border);
 `
 export const Bottom = styled.section`
     display: flex;
@@ -146,11 +159,12 @@ export const SocialMedia = styled.ul`
 export const SocialItem = styled.li`
     width: 30px;
     height: 30px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    border: var(--green-border);
+    border: ${({ social }) => !social || "var(--green-border)"};
     list-style-type: none;
     &:not(:last-child) {
         margin-right: 10px;
@@ -158,4 +172,11 @@ export const SocialItem = styled.li`
 `
 export const SocialLink = styled.a`
 
+`
+export const CopyRight = styled.p`
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: var(--bold-color);
 `
