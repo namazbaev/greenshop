@@ -1,9 +1,55 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled, { css } from 'styled-components';
+import { Link, NavLink } from 'react-router-dom';
+import { ReactComponent as BasketIcon } from 'assets/icons/basket.svg';
 import { ReactComponent as LogoutIcon } from 'assets/icons/logout.svg';
+import { ReactComponent as SearchIcon } from 'assets/icons/search.svg';
 
+const iconCommon = css`
+    cursor: pointer;
+`
+const displayCommon = css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+`;
 export const LogoOut = styled(LogoutIcon)`
+    ${iconCommon}
     margin-right: 4px;
+`
+export const LinkTo = styled(Link)`
+    text-decoration: none;
+`
+export const Basket = styled(BasketIcon)`
+    ${iconCommon}
+`
+export const Search = styled(SearchIcon)`
+    ${iconCommon}
+`
+export const BasketWrap = styled.div`
+    position: relative;
+`
+export const BadgeWrap = styled.span`
+    ${displayCommon};
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: -5px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+`
+export const Badge = styled.button`
+    ${displayCommon};
+    color: #fff;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    border: none;
+    line-height: 13px;
+    border-radius: 50%;
+    background-color: var(--green);
 `
 export const Container = styled.div`
     width: 100%;
@@ -42,11 +88,20 @@ export const MenuLink = styled(NavLink)`
     border-bottom: ${({ active }) => active ? '3px solid var(--green)' : ''};
 `
 export const LogoSection = styled.div``
-export const Menu = styled.nav`
-
+export const Menu = styled.nav``
+export const RightSection = styled.div``
+export const RightElList = styled.ul`
+    display: flex;
+    align-items: center;
 `
-export const RightSection = styled.div`
-
+export const RightElItem = styled.li`
+    list-style-type: none;
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+`
+export const Element = styled.span`
+    display: inline-block;
 `
 export const LoginBtn = styled.button`
     display: flex;

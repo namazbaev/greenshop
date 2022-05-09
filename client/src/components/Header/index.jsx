@@ -1,8 +1,12 @@
-import { useState } from 'react';
 import LogoImg from 'assets/icons/logo.svg';
 import { menuList } from 'routes/components';
 import { useLocation } from 'react-router-dom';
-import { Container, LogoSection, Logo, Menu, MenuList, MenuItem, MenuLink, LoginBtn, LogoOut, RightSection } from './style';
+import { CART, LOGIN } from 'routes/constants';
+import {
+    Container, LogoSection, Logo, Menu, MenuList, MenuItem, MenuLink, Element,
+    LoginBtn, LogoOut, RightSection, RightElList, RightElItem, Basket, LinkTo,
+    BadgeWrap, Badge, Search, BasketWrap
+} from './style';
 export default () => {
     const location = useLocation();
     const active = location.pathname;
@@ -21,10 +25,33 @@ export default () => {
                 </MenuList>
             </Menu>
             <RightSection>
-                <LoginBtn>
-                    <LogoOut />
-                    Login
-                </LoginBtn>
+                <RightElList>
+                    <RightElItem>
+                        <Element>
+                            <Search />
+                        </Element>
+                    </RightElItem>
+                    <RightElItem>
+                        <LinkTo to={CART}>
+                            <Element>
+                                <BasketWrap>
+                                    <Basket />
+                                    <BadgeWrap>
+                                        <Badge>6</Badge>
+                                    </BadgeWrap>
+                                </BasketWrap>
+                            </Element>
+                        </LinkTo>
+                    </RightElItem>
+                    <RightElItem>
+                        <LinkTo to={LOGIN}>
+                            <LoginBtn>
+                                <LogoOut />
+                                Login
+                            </LoginBtn>
+                        </LinkTo>
+                    </RightElItem>
+                </RightElList>
             </RightSection>
         </Container>
     )
