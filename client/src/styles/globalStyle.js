@@ -1,11 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     * {
-        @import url('./font.css');
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: "Cera Pro", sans-serif;
+    }
+    html, body {
+        max-width: 1280px;
+        margin: 0 auto;
     }
     :root {
         --gray:#FBFBFB;
@@ -13,5 +16,6 @@ export const GlobalStyle = createGlobalStyle`
         --bold-color: #3D3D3D;
         --text-color: #727272;
         --shadow-color: #C2C3C4;
+        --green-border: 1px solid #46A358;
     }
 `
