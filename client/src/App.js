@@ -1,14 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { GlobalStyle } from 'styles/globalStyle';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        Client side
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <div>App</div>
+    </>
+  )
 }
 
-export default App;
+export default App

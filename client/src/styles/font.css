@@ -1,0 +1,35 @@
+    /* inter-regular - latin */
+    @font-face {
+        font-family: 'Cera Pro';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../assets/fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('../assets/fonts/CeraPro-Regular.woff') format('woff');
+    }
+
+    /* inter-500 - latin */
+    @font-face {
+        font-family: 'Cera Pro';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../assets/fonts/CeraPro-Medium.woff2') format('woff2'),
+            url('../assets/fonts/CeraPro-Medium.woff') format('woff');
+    }
+
+    /* inter-700 - latin */
+    @font-face {
+        font-family: 'Cera Pro';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../assets/fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('../assets/fonts/CeraPro-Bold.woff') format('woff');
+    }
+
+    /* inter-900 - latin */
+    @font-face {
+        font-family: 'Cera Pro';
+        font-style: normal;
+        font-weight: 900;
+        src: url('../assets/fonts/CeraPro-Black.woff2') format('woff2'),
+            url('../assets/fonts/CeraPro-Black.woff') format('woff');
+    }
