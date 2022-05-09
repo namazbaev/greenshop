@@ -13,7 +13,7 @@ export default () => {
     return (
         <Container>
             <LogoSection>
-                <Logo src={LogoImg} />
+                <Logo src={LogoImg} alt="logo" />
             </LogoSection>
             <Menu>
                 <MenuList>
@@ -37,7 +37,7 @@ export default () => {
                                 <BasketWrap>
                                     <Basket />
                                     <BadgeWrap>
-                                        <Badge>6</Badge>
+                                        <Badge>25</Badge>
                                     </BadgeWrap>
                                 </BasketWrap>
                             </Element>

@@ -16,6 +16,6 @@ export const GlobalStyle = createGlobalStyle`
         --bold-color: #3D3D3D;
         --text-color: #727272;
         --shadow-color: #C2C3C4;
-        --green-border: 1px solid #46A358;
+        --green-border: 1px solid rgba(70, 163, 88, 0.2);
     }
 `

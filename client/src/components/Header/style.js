@@ -31,8 +31,8 @@ export const BasketWrap = styled.div`
 export const BadgeWrap = styled.span`
     ${displayCommon};
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     top: 0;
     right: -5px;
     width: 16px;
@@ -42,8 +42,8 @@ export const BadgeWrap = styled.span`
 export const Badge = styled.button`
     ${displayCommon};
     color: #fff;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     font-size: 10px;
     font-weight: 500;
     border: none;
@@ -87,7 +87,10 @@ export const MenuLink = styled(NavLink)`
     font-weight: ${({ active }) => active ? 700 : 400};
     border-bottom: ${({ active }) => active ? '3px solid var(--green)' : ''};
 `
-export const LogoSection = styled.div``
+export const LogoSection = styled.div`
+    width: 150px;
+    height: 35px;
+`
 export const Menu = styled.nav``
 export const RightSection = styled.div``
 export const RightElList = styled.ul`
