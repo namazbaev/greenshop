@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import Card from 'components/Card';
 import { categories, products } from 'utils/json';
-import Plant from 'assets/images/plant.svg';
-import Violet from 'assets/images/violet.svg';
-import Barberton from 'assets/images/barberton.svg';
 import {
     BannerText, BannerDescription, ShopNow, BannerGreen,
     Container, Banner, TextSection, ImageSection, BannerTitle, Catalog,
-    CatalogSection, Categories, Products, CategoryTitle, Size, SuperSales,
+    CatalogSection, Categories, Products, CategoryTitle, Size, /*SuperSales,*/
     CategoryList, CategoryItem, CategoryName, CategoryNumber, SizeList, SizeItem,
     ProductHead, TabsWrap, Tabs, TabItem, TabName, Sort, SortText, DownArrowIcon
 } from './style';
