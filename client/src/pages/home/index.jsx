@@ -1,11 +1,19 @@
-import React from 'react';
+import { useState } from 'react';
+import Card from 'components/Card';
+import { categories, products } from 'utils/json';
+import Plant from 'assets/images/plant.svg';
+import Violet from 'assets/images/violet.svg';
+import Barberton from 'assets/images/barberton.svg';
 import {
-    Container, Banner, TextSection, ImageSection, BannerTitle,
     BannerText, BannerDescription, ShopNow, BannerGreen,
-    CatalogSection, Categories, Products, CategoryTitle,
-    CategoryList, CategoryItem, CategoryName, CategoryNumber
+    Container, Banner, TextSection, ImageSection, BannerTitle, Catalog,
+    CatalogSection, Categories, Products, CategoryTitle, Size, SuperSales,
+    CategoryList, CategoryItem, CategoryName, CategoryNumber, SizeList, SizeItem,
+    ProductHead, TabsWrap, Tabs, TabItem, TabName, Sort, SortText, DownArrowIcon
 } from './style';
 const Home = () => {
+    const [sortActive, setSortActive] = useState(false);
+    const [categoryClick, setCategoryClick] = useState(false);
     return (
         <Container>
             <Banner>
@@ -30,46 +38,68 @@ const Home = () => {
                 <Categories>
                     <CategoryTitle>Categories</CategoryTitle>
                     <CategoryList>
-                        <CategoryItem>
-                            <CategoryName active>House Plants</CategoryName>
-                            <CategoryNumber active>(33)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Potter Plants</CategoryName>
-                            <CategoryNumber>(12)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Seeds</CategoryName>
-                            <CategoryNumber>(65)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Small Plants</CategoryName>
-                            <CategoryNumber>(39)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Big Plants</CategoryName>
-                            <CategoryNumber>(23)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Succulents</CategoryName>
-                            <CategoryNumber>(17)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Trerrariums</CategoryName>
-                            <CategoryNumber>(19)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Gardening</CategoryName>
-                            <CategoryNumber>(13)</CategoryNumber>
-                        </CategoryItem>
-                        <CategoryItem>
-                            <CategoryName>Accessories</CategoryName>
-                            <CategoryNumber>(18)</CategoryNumber>
-                        </CategoryItem>
+                        {categories.map(({ title, count }) => (
+                            <CategoryItem key={title}>
+                                <CategoryName onClick={() => setCategoryClick(!categoryClick)}>{title}</CategoryName>
+                                <CategoryNumber>({count})</CategoryNumber>
+                            </CategoryItem>
+                        ))}
                     </CategoryList>
+                    <CategoryTitle>
+                        Price Range
+                    </CategoryTitle>
+                    <CategoryTitle>
+                        Size
+                    </CategoryTitle>
+                    <SizeList>
+                        <SizeItem>
+                            <Size>Small</Size>
+                            <Size>(119)</Size>
+                        </SizeItem>
+                        <SizeItem>
+                            <Size>Medium</Size>
+                            <Size>(86)</Size>
+                        </SizeItem>
+                        <SizeItem>
+                            <Size>Large</Size>
+                            <Size>(78)</Size>
+                        </SizeItem>
+                    </SizeList>
                 </Categories>
+                {/* <SuperSales /> */}
                 <Products>
-                    Products
+                    <ProductHead>
+                        <TabsWrap>
+                            <Tabs>
+                                <TabItem active>
+                                    <TabName active>
+                                        All Plants
+                                    </TabName>
+                                </TabItem>
+                                <TabItem>
+                                    <TabName>
+                                        New Arrivals
+                                    </TabName>
+                                </TabItem>
+                                <TabItem>
+                                    <TabName>
+                                        Sale
+                                    </TabName>
+                                </TabItem>
+                            </Tabs>
+                        </TabsWrap>
+                        <Sort onClick={() => setSortActive(!sortActive)}>
+                            <SortText>
+                                Short by: Default sorting
+                            </SortText>
+                            <DownArrowIcon active={sortActive ? sortActive : ''} />
+                        </Sort>
+                    </ProductHead>
+                    <Catalog>
+                        {products.map(({ image, title, price }, index) => (
+                            <Card key={index} img={image} title={title} price={`$${price}`} />
+                        ))}
+                    </Catalog>
                 </Products>
             </CatalogSection>
         </Container>
